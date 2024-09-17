@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@studio-freight/hamo": "^0.6.33",
+    "@studio-freight/lenis": "^1.0.42",
     "next": "15.0.0-rc.0",
     "next-video": "^1.1.4",
     "react": "19.0.0-rc-f2df5694-20240916",
