@@ -14,7 +14,13 @@ const Navbar = () => {
 
 export default Navbar;
 
-const NavItem = ({ isActive, label }: { label: string; isActive: boolean }) => {
+const NavItem = ({
+  isActive,
+  label,
+}: {
+  label: string;
+  isActive?: boolean;
+}) => {
   return (
     <div className="px-6 py-3 rounded-[16px] border-[1px] text-white">
       {label}
