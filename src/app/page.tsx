@@ -1,4 +1,5 @@
 import Demo from "@/components/Demo";
+import Features from "@/components/Features";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Technologies from "@/components/Technologies";
@@ -9,6 +10,7 @@ export default function Home() {
     <div className="bg-black min-h-[200vh]">
       <Navbar />
       <Demo />
+      <Features />
       {/* <Technologies /> */}
       <Footer />
     </div>
