@@ -1,5 +1,6 @@
 import Demo from "@/components/Demo";
-import Features from "@/components/Features";
+import CallFeatures from "@/components/Features/call-features";
+import Features from "@/components/Features/chat-features";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Technologies from "@/components/Technologies";
@@ -11,6 +12,7 @@ export default function Home() {
       <Navbar />
       <Demo />
       <Features />
+      <CallFeatures />
       {/* <Technologies /> */}
       <Footer />
     </div>

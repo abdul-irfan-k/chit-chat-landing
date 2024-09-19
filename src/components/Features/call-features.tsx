@@ -2,11 +2,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import FeatureCard from "./Feature-Card";
 import { RotateCwSquare } from "lucide-react";
-import { AnimatePresence, useScroll, useTransform } from "framer-motion";
+import {
+  AnimatePresence,
+  useScroll,
+  useTransform,
+  motion,
+} from "framer-motion";
 import BackgroundVideo from "next-video/background-video";
 import Demo2 from "../../../videos/demo2.webm";
+import Demo3 from "../../../videos/demo3.webm";
 
-const Features = () => {
+const CallFeatures = () => {
   const featuresRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -28,52 +34,63 @@ const Features = () => {
   }, [activeIndex]);
 
   return (
-    <div className="relative px-44 py-60 h-[600vh]" ref={featuresRef}>
+    <div className="relative  py-60 h-[600vh]" ref={featuresRef}>
       <div className="sticky top-6">
-        <div className="gap-3 flex items-center">
+        <div className="px-44 gap-3 flex items-center">
           <div className="relative block w-6 aspect-square rounded-full bg-white "></div>
           <span className="text-white text-2xl">features</span>
         </div>
-        {/* <h1 className="mt-6 text-center font-extrabold text-6xl">
-          Chat Featuress
-        </h1> */}
-        <div className="mt-10 gap-5 flex ">
-          <div className="flex flex-col w-full">
+
+        <div className="relative mt-10 gap-5 flex ">
+          <div className="relative w-full aspect-square bg-[#171717]">
+            <motion.div
+              variants={{ active: { opacity: 1 }, initial: { opacity: 0 } }}
+              animate={index < 2 ? "active" : "initial"}
+              className="absolute top-0 left-0 w-full h-full"
+            >
+              <BackgroundVideo src={Demo2} className="w-full h-full" />
+            </motion.div>
+            <motion.div
+              variants={{ active: { opacity: 1 }, initial: { opacity: 0 } }}
+              animate={index >= 2 ? "active" : "initial"}
+              className="absolute top-0 left-0 w-full h-full"
+            >
+              <BackgroundVideo src={Demo3} className="w-full h-full" />
+            </motion.div>
+          </div>
+          <div className="pr-44 flex flex-col w-full">
             <AnimatePresence>
               <FeatureCard
                 title="Message Reactions & Viewers List"
                 description="Enhance conversations with personalized message reactions, while the insightful viewers list keeps you updated on who’s following the chat."
                 icon={<RotateCwSquare className="w-6 h-6   " />}
-                active={index === 0}
+                active={index == 0}
               />
               <FeatureCard
                 title="Keyboard Shortcuts"
                 description="Enhance conversations with personalized message reactions, while the insightful viewers list keeps you updated on who’s following the chat."
                 icon={<RotateCwSquare className="w-6 h-6   " />}
-                active={index === 1}
+                active={index == 1}
               />
               <FeatureCard
                 title="Dark & Light Themes"
                 description="Enhance conversations with personalized message reactions, while the insightful viewers list keeps you updated on who’s following the chat."
                 icon={<RotateCwSquare className="w-6 h-6   " />}
-                active={index === 2}
+                active={index == 2}
               />
               <FeatureCard
                 title="Dual-Mode Aesthetic: Dark & Light Themest"
-                description="Enhance conversations with personalized message reactions, while the insightful viewers list keeps you updated on who’s following the chat."
+                description="Enhancepx-44 conversations with personalized message reactions, while the insightful viewers list keeps you updated on who’s following the chat."
                 icon={<RotateCwSquare className="w-6 h-6   " />}
-                active={index === 3}
+                active={index == 3}
               />
               <FeatureCard
                 title="Customizable User Message Themes"
                 description="Enhance conversations with personalized message reactions, while the insightful viewers list keeps you updated on who’s following the chat."
                 icon={<RotateCwSquare className="w-6 h-6   " />}
-                active={index === 4}
+                active={index == 4}
               />
             </AnimatePresence>
-          </div>
-          <div className="w-full">
-            <BackgroundVideo src={Demo2} />
           </div>
         </div>
       </div>
@@ -81,4 +98,4 @@ const Features = () => {
   );
 };
 
-export default Features;
+export default CallFeatures;

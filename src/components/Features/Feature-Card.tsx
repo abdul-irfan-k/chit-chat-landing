@@ -18,7 +18,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 }) => {
   return (
     <motion.div
-      className={"gap-6 flex flex-col px-6 py-5 rounded-[16px]  "}
+      className={"gap-6 flex flex-col px-6 py-8 rounded-[16px]  "}
       variants={{
         active: {
           backgroundColor: "#101010",
