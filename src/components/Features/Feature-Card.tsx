@@ -1,4 +1,4 @@
-import { MotionValue, useTransform } from "framer-motion";
+import { AnimatePresence, MotionValue, useTransform } from "framer-motion";
 import React from "react";
 import { motion } from "framer-motion";
 import { init } from "next/dist/compiled/webpack/webpack";
@@ -36,23 +36,24 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         <span className="mt-2">{icon}</span>
         {title}
       </span>
-      <motion.span
-        variants={{
-          active: {
-            display: "block",
-            opacity: 1,
-          },
-          initial: {
-            display: "none",
-            opacity: 0,
-          },
-        }}
-        className="pl-9 text-[#ffffffb3]"
-        animate={active ? "active" : "initial"}
-        transition={{ duration: 0.3 }}
-      >
-        {description}
-      </motion.span>
+      <AnimatePresence initial={false}>
+        {active && (
+          <motion.span
+            variants={{
+              open: { opacity: 1, height: "auto" },
+              collapsed: { opacity: 0, height: 0 },
+            }}
+            className="pl-9 text-[#ffffffb3]"
+            key="content"
+            initial="collapsed"
+            animate="open"
+            exit="collapsed"
+            transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
+          >
+            {description}
+          </motion.span>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 };

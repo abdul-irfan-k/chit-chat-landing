@@ -18,7 +18,7 @@ const LenisSmoothScroll = ({ children }: { children: React.ReactNode }) => {
       smoothWheel: true,
       syncTouch: true,
       // duration: 5,
-      lerp: 0.005,
+      lerp: 0.01,
     });
     lenis.start();
     lenis.resize;

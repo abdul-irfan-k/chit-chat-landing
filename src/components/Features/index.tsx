@@ -3,6 +3,8 @@ import React, { useEffect, useRef, useState } from "react";
 import FeatureCard from "./Feature-Card";
 import { RotateCwSquare } from "lucide-react";
 import { AnimatePresence, useScroll, useTransform } from "framer-motion";
+import BackgroundVideo from "next-video/background-video";
+import Demo2 from "../../../videos/demo2.webm";
 
 const Features = () => {
   const featuresRef = useRef(null);
@@ -26,15 +28,15 @@ const Features = () => {
   }, [activeIndex]);
 
   return (
-    <div className="relative px-44 py-60 h-[400vh]" ref={featuresRef}>
+    <div className="relative px-44 py-60 h-[600vh]" ref={featuresRef}>
       <div className="sticky top-6">
         <div className="gap-3 flex items-center">
           <div className="relative block w-6 aspect-square rounded-full bg-white "></div>
           <span className="text-white text-2xl">features</span>
         </div>
-        <h1 className="mt-6 text-center font-extrabold text-6xl">
+        {/* <h1 className="mt-6 text-center font-extrabold text-6xl">
           Chat Featuress
-        </h1>
+        </h1> */}
         <div className="mt-10 gap-5 flex ">
           <div className="flex flex-col w-full">
             <AnimatePresence>
@@ -70,7 +72,9 @@ const Features = () => {
               />
             </AnimatePresence>
           </div>
-          <div className="w-full"></div>
+          <div className="w-full">
+            <BackgroundVideo src={Demo2} />
+          </div>
         </div>
       </div>
     </div>
