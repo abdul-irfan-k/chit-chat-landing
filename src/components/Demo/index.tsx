@@ -1,6 +1,5 @@
 import React from "react";
-import DemoVideo from "../../../videos/demo1.mp4";
-import BackgroundVideo from "next-video/background-video";
+import BackgroundVideo from "../BackgroundVideo";
 
 const Demo = () => {
   return (
@@ -11,7 +10,11 @@ const Demo = () => {
       </div>
       <h1 className="mt-6 text-center font-extrabold text-6xl">VIDEO DEMO</h1>
       <div className="mt-10 w-full aspect-video rounded-[16px] overflow-hidden">
-        <BackgroundVideo src={DemoVideo} />
+        <BackgroundVideo
+          src={
+            "https://res.cloudinary.com/dl9ibkuyg/video/upload/v1726924053/ymms4onuhuo0dtahsyhu.mp4"
+          }
+        />
       </div>
     </div>
   );

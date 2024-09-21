@@ -8,9 +8,7 @@ import {
   useTransform,
   motion,
 } from "framer-motion";
-import BackgroundVideo from "next-video/background-video";
-import Demo2 from "../../../videos/demo2.webm";
-import Demo3 from "../../../videos/demo3.webm";
+import BackgroundVideo from "../BackgroundVideo";
 
 const ChatFeatures = () => {
   const featuresRef = useRef(null);
@@ -83,7 +81,11 @@ const ChatFeatures = () => {
               className="absolute top-0 left-0 w-full h-full"
             > */}
             {index < 2 && (
-              <BackgroundVideo src={Demo2} className="w-full h-full" />
+              <BackgroundVideo
+                src={
+                  "https://res.cloudinary.com/dl9ibkuyg/video/upload/v1726924500/hrpkpmvpdocebjayqbrk.webm"
+                }
+              />
             )}
             {/* </motion.div> */}
             {/* <motion.div
@@ -92,7 +94,11 @@ const ChatFeatures = () => {
               className="absolute top-0 left-0 w-full h-full"
             > */}
             {index >= 2 && (
-              <BackgroundVideo src={Demo3} className="w-full h-full" />
+              <BackgroundVideo
+                src={
+                  "https://res.cloudinary.com/dl9ibkuyg/video/upload/v1726924500/owzqb8nomvma7mpdeozr.webm"
+                }
+              />
             )}
             {/* </motion.div> */}
           </div>
