@@ -3,7 +3,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="relative flex px-40 items-center">
+    <div className="relative flex  items-center px-3 sm:px-5  md:px-14 lg:px-28 xl:px-40">
       <div className="w-full flex justify-center">
         <div className="gap-3 w-[80%] flex flex-col">
           <h2 className="text-5xl font-extrabold">
@@ -18,7 +18,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="w-full gap-6 items-center  flex justify-end">
+      <div className="hidden w-full gap-6 items-center   justify-end lg:flex">
         <div className="gap-6 relative flex flex-col w-[17%]">
           <div className="relative w-full aspect-[1.2/2.8] rounded-full  overflow-hidden">
             <Image fill src={"/Asset/Image/user4.png"} alt="image" />

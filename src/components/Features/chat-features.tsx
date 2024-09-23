@@ -55,7 +55,7 @@ const ChatFeatures = () => {
       onViewportLeave={() => console.log("leave")}
     >
       <div className="sticky top-0">
-        <div className=" gap-3 flex items-center px-3 sm:px-5  md:px-14 lg:px-28 xl:px-40">
+        <div className=" gap-3 flex items-center px-3 sm:px-5  md:px-14 lg:px-28 xl:px-32">
           <div className="relative block w-6 aspect-square rounded-full bg-white "></div>
           <span className="text-white text-2xl">features</span>
         </div>
