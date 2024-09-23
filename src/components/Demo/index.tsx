@@ -3,7 +3,7 @@ import BackgroundVideo from "../BackgroundVideo";
 
 const Demo = () => {
   return (
-    <div className="relative px-44 py-60">
+    <div className="relative  py-60 px-3 sm:px-5  md:px-14 lg:px-28 xl:px-40">
       <div className="gap-3 flex items-center">
         <div className="relative block w-6 aspect-square rounded-full bg-white "></div>
         <span className="text-white text-2xl">demo</span>

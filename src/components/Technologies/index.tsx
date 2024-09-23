@@ -4,7 +4,7 @@ import React from "react";
 const Technologies = () => {
   return (
     <div className="relative  py-60">
-      <div className="px-44 gap-3 flex items-center">
+      <div className="px-40 gap-3 flex items-center">
         <div className="relative block w-6 aspect-square rounded-full bg-white "></div>
         <span className="text-white text-2xl">Technologies</span>
       </div>

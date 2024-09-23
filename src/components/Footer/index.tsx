@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="relative px-44 py-60 ">
+    <div className="relative px-40 py-60 ">
       <div className="relative p-[50px] bg-white text-black rounded-[64px] aspect-[2/1]">
         <div className="w-[75%]">
           <h1 className="text-6xl font-extrabold">

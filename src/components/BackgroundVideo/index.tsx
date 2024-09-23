@@ -1,7 +1,13 @@
+import React from "react";
+
 interface BackgroundVideoProps {
   src: string;
+  autoPlay?: boolean;
 }
-const BackgroundVideo = ({ src }: BackgroundVideoProps) => (
+const BackgroundVideo = React.forwardRef<
+  HTMLVideoElement,
+  BackgroundVideoProps
+>(({ src, autoPlay = true }, ref) => (
   <div
     style={{
       position: "relative",
@@ -10,20 +16,21 @@ const BackgroundVideo = ({ src }: BackgroundVideoProps) => (
     }}
   >
     <video
-      autoPlay
+      // autoPlay={autoPlay}
       loop
       muted
-      playsInline
+      // playsInline
       style={{
         height: "100%",
         width: "100%", // Adjust width based on height
         objectFit: "cover", // Maintain aspect ratio and cover the space
         zIndex: -1, // Send it behind other content
       }}
+      ref={ref}
     >
       <source src={src} type="video/mp4" />\
     </video>
   </div>
-);
+));
 
 export default BackgroundVideo;

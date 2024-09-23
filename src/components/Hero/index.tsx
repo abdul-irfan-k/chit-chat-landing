@@ -3,15 +3,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="relative flex px-44 items-center">
-      <div className="absolute top-2  w-[5%] aspect-square">
-        <Image fill src={"/Asset/Image/logo.png"} alt="image" />
-      </div>
-
-      <div className="absolute top-[5%] translate-y-[-50%] text-2xl font-bold left-[50%] translate-x-[-50%]">
-        CHIT-CHAT
-      </div>
-
+    <div className="relative flex px-40 items-center">
       <div className="w-full flex justify-center">
         <div className="gap-3 w-[80%] flex flex-col">
           <h2 className="text-5xl font-extrabold">
