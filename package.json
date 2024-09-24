@@ -9,9 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@studio-freight/hamo": "^0.6.33",
-    "@studio-freight/lenis": "^1.0.42",
     "framer-motion": "^11.5.4",
+    "lenis": "^1.1.13",
     "lucide-react": "^0.441.0",
     "next": "15.0.0-rc.0",
     "react": "19.0.0-rc-f2df5694-20240916",

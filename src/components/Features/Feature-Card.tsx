@@ -36,24 +36,23 @@ const FeatureCard = React.forwardRef<HTMLVideoElement, FeatureCardProps>(
             <span className="mt-2">{icon}</span>
             {title}
           </span>
-          <AnimatePresence initial={false}>
-            {active && (
-              <motion.span
-                variants={{
-                  open: { opacity: 1, height: "auto" },
-                  collapsed: { opacity: 0, height: 0 },
-                }}
-                className=" text-[#ffffffb3] text-sm lg:text-base lg:pl-9 "
-                key="content"
-                initial="collapsed"
-                animate="open"
-                exit="collapsed"
-                transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
-                // layout
-              >
-                {description}
-              </motion.span>
-            )}
+          <AnimatePresence>
+            {/* {active && ( */}
+            <motion.div
+              variants={{
+                open: { opacity: 1, height: "auto" },
+                collapsed: { opacity: 0, height: 0 },
+              }}
+              className=" text-[#ffffffb3] text-sm lg:text-base lg:pl-9 "
+              key="content"
+              initial="collapsed"
+              animate={active ? "open" : "collapsed"}
+              exit="collapsed"
+              transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
+            >
+              {description}
+            </motion.div>
+            {/* )} */}
           </AnimatePresence>
         </motion.div>
         <motion.div

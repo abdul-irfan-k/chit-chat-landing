@@ -40,11 +40,21 @@ const ChatFeatures = () => {
   }, [activeIndex]);
 
   const onViewportEnterHandler = () => {
+    console.log("on view port enter");
     video1.current?.play();
     video2.current?.play();
     video3.current?.play();
     video4.current?.play();
     video5.current?.play();
+    console.log("on view port enter after played");
+  };
+
+  const onViewportLeaveHandler = () => {
+    video1.current?.pause();
+    video2.current?.pause();
+    video3.current?.pause();
+    video4.current?.pause();
+    video5.current?.pause();
   };
 
   return (
@@ -62,51 +72,51 @@ const ChatFeatures = () => {
 
         <div className="relative mt-5 gap-5 flex px-3 sm:px-5  md:px-14 lg:px-0 ">
           <div className="gap-5 flex flex-wrap justify-between  w-full  lg:pl-32 lg:flex-col lg:justify-normal lg:gap-0">
-            <AnimatePresence>
-              <FeatureCard
-                title="Message Reactions & Viewers List"
-                description="Enhance conversations with personalized message reactions, while the insightful."
-                icon={<RotateCwSquare className="w-6 h-6   " />}
-                active={index == 1 || deviceType != "Desktop"}
-                src="https://res.cloudinary.com/dl9ibkuyg/video/upload/v1726924500/hrpkpmvpdocebjayqbrk.webm"
-                ref={video1}
-              />
+            {/* <AnimatePresence> */}
+            <FeatureCard
+              title="Message Reactions & Viewers List"
+              description="Enhance conversations with personalized message reactions, while the insightful."
+              icon={<RotateCwSquare className="w-6 h-6   " />}
+              active={index == 1 || deviceType != "Desktop"}
+              src="https://res.cloudinary.com/dl9ibkuyg/video/upload/v1726924500/hrpkpmvpdocebjayqbrk.webm"
+              ref={video1}
+            />
 
-              <FeatureCard
-                title="Keyboard Shortcuts"
-                description="Enhance conversations with personalized message reactions, while the insightful."
-                icon={<RotateCwSquare className="w-6 h-6   " />}
-                active={index == 2 || deviceType != "Desktop"}
-                src="https://res.cloudinary.com/dl9ibkuyg/video/upload/v1726924500/owzqb8nomvma7mpdeozr.webm"
-                ref={video2}
-              />
+            <FeatureCard
+              title="Keyboard Shortcuts"
+              description="Enhance conversations with personalized message reactions, while the insightful."
+              icon={<RotateCwSquare className="w-6 h-6   " />}
+              active={index == 2 || deviceType != "Desktop"}
+              src="https://res.cloudinary.com/dl9ibkuyg/video/upload/v1726924500/owzqb8nomvma7mpdeozr.webm"
+              ref={video2}
+            />
 
-              <FeatureCard
-                title="Dark & Light Themes"
-                description="Enhance conversations with personalized message reactions, while the insightful."
-                icon={<RotateCwSquare className="w-6 h-6   " />}
-                active={index == 3 || deviceType != "Desktop"}
-                src="https://res.cloudinary.com/dl9ibkuyg/video/upload/v1726924500/hrpkpmvpdocebjayqbrk.webm"
-                ref={video3}
-              />
+            <FeatureCard
+              title="Dark & Light Themes"
+              description="Enhance conversations with personalized message reactions, while the insightful."
+              icon={<RotateCwSquare className="w-6 h-6   " />}
+              active={index == 3 || deviceType != "Desktop"}
+              src="https://res.cloudinary.com/dl9ibkuyg/video/upload/v1726924500/hrpkpmvpdocebjayqbrk.webm"
+              ref={video3}
+            />
 
-              <FeatureCard
-                title="Dual-Mode Aesthetic: Dark & Light Themest"
-                description="Enhancepx-40 conversations with personalized message reactions, while the insightful viewers list keeps you updated on who’s following the chat."
-                icon={<RotateCwSquare className="w-6 h-6   " />}
-                active={index == 4 || deviceType != "Desktop"}
-                src="https://res.cloudinary.com/dl9ibkuyg/video/upload/v1726924500/owzqb8nomvma7mpdeozr.webm"
-                ref={video4}
-              />
-              <FeatureCard
-                title="Customizable User Message Themes"
-                description="Enhance conversations with personalized message reactions, while the insightful."
-                icon={<RotateCwSquare className="w-6 h-6   " />}
-                active={index == 5 || deviceType != "Desktop"}
-                src="https://res.cloudinary.com/dl9ibkuyg/video/upload/v1726924500/hrpkpmvpdocebjayqbrk.webm"
-                ref={video5}
-              />
-            </AnimatePresence>
+            <FeatureCard
+              title="Dual-Mode Aesthetic: Dark & Light Themest"
+              description="Enhancepx-40 conversations with personalized message reactions, while the insightful viewers list keeps you updated on who’s following the chat."
+              icon={<RotateCwSquare className="w-6 h-6   " />}
+              active={index == 4 || deviceType != "Desktop"}
+              src="https://res.cloudinary.com/dl9ibkuyg/video/upload/v1726924500/owzqb8nomvma7mpdeozr.webm"
+              ref={video4}
+            />
+            <FeatureCard
+              title="Customizable User Message Themes"
+              description="Enhance conversations with personalized message reactions, while the insightful."
+              icon={<RotateCwSquare className="w-6 h-6   " />}
+              active={index == 5 || deviceType != "Desktop"}
+              src="https://res.cloudinary.com/dl9ibkuyg/video/upload/v1726924500/hrpkpmvpdocebjayqbrk.webm"
+              ref={video5}
+            />
+            {/* </AnimatePresence> */}
           </div>
           {/* <div className="relative w-full aspect-square bg-[#171717]"> */}
           <div className="relative  aspect-square  lg:w-full"></div>
