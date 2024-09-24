@@ -3,9 +3,9 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="relative flex  items-center px-3 sm:px-5  md:px-14 lg:px-28 xl:px-40">
+    <div className="relative flex  items-center px-3 sm:px-5  md:px-14 lg:px-28 xl:px-40 pt-32 lg:pt-0">
       <div className="w-full flex justify-center">
-        <div className="gap-3 w-[80%] flex flex-col">
+        <div className="gap-3  flex flex-col w-[80%]">
           <h2 className="text-5xl font-extrabold">
             Great Meeting Are Just The Beginning
           </h2>

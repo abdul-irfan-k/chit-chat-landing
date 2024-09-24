@@ -56,7 +56,7 @@ const CallFeatures = () => {
 
   return (
     <motion.div
-      className="relative  lg:py-60 lg:h-[600vh]"
+      className="relative   lg:h-[600vh] pt-32 lg:pt-44 xl:pt-60"
       ref={featuresRef}
       onViewportEnter={onViewportEnterHandler}
       onViewportLeave={onViewportLeaveHandler}

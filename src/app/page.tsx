@@ -17,7 +17,7 @@ export default function Home() {
       <Demo />
       <Features />
       <CallFeatures />
-      {/* <Technologies /> */}
+      <Technologies />
       <Footer />
     </div>
   );
